@@ -50,7 +50,6 @@ export function UserScreen() {
 
     return (
         <View style={styles.container}>
-            <Text>Users Screen</Text>
             <FlatList
                 ListHeaderComponent={
                     <Button
@@ -59,7 +58,7 @@ export function UserScreen() {
                     />
                 }
                 ListEmptyComponent={
-                    <Text>Aucun utilisateur n'a été chargé.</Text>
+                    <Text style={{ marginTop:20, alignSelf:'center', fontSize:18 }}>Aucun utilisateur n'a été chargé.</Text>
                 }
                 refreshing={isFetching}
                 onRefresh={()=>{fetchUsers(users.length)}}
@@ -74,7 +73,7 @@ export function UserScreen() {
                     }}>
                         <View style={styles.item}>
                             <Image
-                                style={{ width: 50, height: 50 }}
+                                style={styles.image}
                                 source={{ uri: item.picture.large }}
                             />
                             <Text style={styles.title}>{item.name.first}</Text>
@@ -113,11 +112,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 32,
+        marginLeft: 10,
     },
     image: {
         width: 50,
         height: 50,
-        radius: 50,
+        borderRadius: 10,
+        borderWidth:2,
+        borderColor: '#e8e8e8',
     }
 
 });
