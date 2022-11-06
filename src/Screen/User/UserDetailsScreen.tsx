@@ -19,7 +19,7 @@ export function UserDetailsScreen() {
                 <Text style={{ marginBottom:20, fontSize:18 }}><Text style={{ fontWeight:'700' }}>First name : </Text>{user.name.first}</Text>
                 <Text style={{ marginBottom:20, fontSize:18 }}><Text style={{ fontWeight:'700' }}>Last name : </Text>{user.name.last}</Text>
                 <Text style={{ marginBottom:20, fontSize:18 }}><Text style={{ fontWeight:'700' }}>Number : </Text>{user.phone}</Text>
-                <Text style={{ marginBottom:20, fontSize:18 }}><Text style={{ fontWeight:'700' }}>Sexe : </Text>{user.sexe}</Text>
+                <Text style={{ marginBottom:20, fontSize:18 }}><Text style={{ fontWeight:'700' }}>Gender : </Text>{user.gender}</Text>
             </View>
         </View>
     );

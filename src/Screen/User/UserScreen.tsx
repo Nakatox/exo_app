@@ -38,6 +38,8 @@ export function UserScreen() {
                 );
             const json = await response.json();
             setUsers([...users, json.results[0]]);
+            console.log(json.results[0]);
+            
             
         } catch (error) {
             console.error(error);

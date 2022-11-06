@@ -4,6 +4,7 @@ export interface User {
     email: string;
     phone: string;
     picture: Picture;
+    gender: string;
 }
 
 interface Picture {
