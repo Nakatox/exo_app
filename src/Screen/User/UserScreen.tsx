@@ -12,6 +12,7 @@ export function UserScreen() {
     const [isFetching, setIsFetching] = useState(false);
 
     const fetchUsers = async (nbUser: Number = 5) => {
+        setIsFetching(true);
         try {
             const response = await fetch(
                 `https://randomuser.me/api/?results=${nbUser}`
@@ -22,13 +23,12 @@ export function UserScreen() {
         } catch (error) {
           console.error(error);
         }
+        setIsFetching(false);
         return
     };
 
     useEffect(() => {
-        setIsFetching(true);
         fetchUsers();
-        setIsFetching(false);
       }, []);
 
     const addUser = async () => {
